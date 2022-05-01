@@ -13,6 +13,7 @@
 		B5441AED281E4CCE00A8F82D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5441AEB281E4CCE00A8F82D /* Main.storyboard */; };
 		B5441AEF281E4CD000A8F82D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5441AEE281E4CD000A8F82D /* Assets.xcassets */; };
 		B5441AF2281E4CD000A8F82D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5441AF0281E4CD000A8F82D /* LaunchScreen.storyboard */; };
+		B5441AFA281E60FF00A8F82D /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = B5441AF9281E60FF00A8F82D /* htmlView.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B5441AEE281E4CD000A8F82D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5441AF1281E4CD000A8F82D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5441AF3281E4CD000A8F82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5441AF9281E60FF00A8F82D /* htmlView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B5441AE5281E4CCE00A8F82D /* AppDelegate.swift */,
 				B5441AE7281E4CCE00A8F82D /* SceneDelegate.swift */,
 				B5441AE9281E4CCE00A8F82D /* ViewController.swift */,
+				B5441AF9281E60FF00A8F82D /* htmlView.html */,
 				B5441AEB281E4CCE00A8F82D /* Main.storyboard */,
 				B5441AEE281E4CD000A8F82D /* Assets.xcassets */,
 				B5441AF0281E4CD000A8F82D /* LaunchScreen.storyboard */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5441AFA281E60FF00A8F82D /* htmlView.html in Resources */,
 				B5441AF2281E4CD000A8F82D /* LaunchScreen.storyboard in Resources */,
 				B5441AEF281E4CD000A8F82D /* Assets.xcassets in Resources */,
 				B5441AED281E4CCE00A8F82D /* Main.storyboard in Resources */,

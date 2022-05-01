@@ -1,24 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsu-DP-Wzu">
+                                <rect key="frame" x="20" y="55" width="321" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM8-sN-OyM">
+                                <rect key="frame" x="351" y="57" width="43" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="Oiv-bV-haP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go"/>
+                                <connections>
+                                    <action selector="btnGotoUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fm5-ID-IN6"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="d0c-O5-fFG">
+                                <rect key="frame" x="20" y="108" width="374" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX3-An-APv">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Site1"/>
+                                        <connections>
+                                            <action selector="btnGoSite1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBH-rs-ObB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOk-kk-tjX">
+                                        <rect key="frame" x="102" y="0.0" width="68.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Site2"/>
+                                        <connections>
+                                            <action selector="btnGoSite2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPY-h9-MJ9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ1-ys-HRa">
+                                        <rect key="frame" x="203.5" y="0.0" width="69" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Html"/>
+                                        <connections>
+                                            <action selector="btnLoadHtmlString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSH-Y0-y9e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am6-fH-R8l">
+                                        <rect key="frame" x="305.5" y="0.0" width="68.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="File"/>
+                                        <connections>
+                                            <action selector="btnLoadHtmlFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHK-Uy-gEW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gH-1y-e2n">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="M8K-8M-dT8"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="shp-Hq-UiV"/>
+                                    <barButtonItem systemItem="stop" id="Eag-eT-nqt">
+                                        <connections>
+                                            <action selector="btnStop:" destination="BYZ-38-t0r" id="WMh-OH-tsl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9qb-3Y-J9D"/>
+                                    <barButtonItem systemItem="refresh" id="7pU-CW-UIk">
+                                        <connections>
+                                            <action selector="btnReload:" destination="BYZ-38-t0r" id="RAb-xW-5xe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2HV-ro-n8n"/>
+                                    <barButtonItem systemItem="rewind" id="hCd-Dm-LxY">
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="BYZ-38-t0r" id="Dkr-Iy-RbP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SF9-xs-vy6"/>
+                                    <barButtonItem systemItem="fastForward" id="2lO-ns-HtA">
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="BYZ-38-t0r" id="we1-Xy-bHW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JeV-JS-WtC"/>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKa-Ri-xbb">
+                                <rect key="frame" x="20" y="167" width="374" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AHM-7d-FhX">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d0c-O5-fFG" firstAttribute="top" secondItem="Gsu-DP-Wzu" secondAttribute="bottom" constant="19" id="8QJ-Xc-IwN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vKa-Ri-xbb" secondAttribute="trailing" constant="20" id="8Sn-fQ-nep"/>
+                            <constraint firstItem="3gH-1y-e2n" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Hf5-nH-3MD"/>
+                            <constraint firstItem="d0c-O5-fFG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kfm-Me-GuD"/>
+                            <constraint firstItem="3gH-1y-e2n" firstAttribute="top" secondItem="vKa-Ri-xbb" secondAttribute="bottom" constant="51" id="Kwb-2Z-hgz"/>
+                            <constraint firstItem="vKa-Ri-xbb" firstAttribute="top" secondItem="d0c-O5-fFG" secondAttribute="bottom" constant="28" id="OEg-gQ-D74"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0c-O5-fFG" secondAttribute="trailing" constant="20" id="Wcq-pa-dKA"/>
+                            <constraint firstItem="3gH-1y-e2n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X7S-XC-wzl"/>
+                            <constraint firstItem="3gH-1y-e2n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bvM-U8-Jw2"/>
+                            <constraint firstItem="GM8-sN-OyM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="bx5-cP-Ymp"/>
+                            <constraint firstItem="GM8-sN-OyM" firstAttribute="leading" secondItem="Gsu-DP-Wzu" secondAttribute="trailing" constant="10" id="cnK-Ag-s4X"/>
+                            <constraint firstItem="Gsu-DP-Wzu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f1E-ga-1Ip"/>
+                            <constraint firstItem="Gsu-DP-Wzu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="opN-C8-Vnb"/>
+                            <constraint firstItem="vKa-Ri-xbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wEL-db-8ys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GM8-sN-OyM" secondAttribute="trailing" constant="20" id="zVI-cS-6dS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="AHM-7d-FhX" id="Mdi-78-P4O"/>
+                        <outlet property="myWebView" destination="vKa-Ri-xbb" id="n1f-C0-b0H"/>
+                        <outlet property="txtUrl" destination="Gsu-DP-Wzu" id="Orh-c0-bH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
